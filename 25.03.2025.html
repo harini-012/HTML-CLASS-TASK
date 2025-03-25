@@ -1,0 +1,117 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+<title>Transform</title>
+</head>
+<style>
+div{width:200px;
+height:100px;
+width:50%
+background-color:coral;
+border:2px solid blue;
+transform:translate(50px,100px);
+
+}
+#d1{transform:rotate(30deg,20deg);
+background-color:yellow;
+transform:scaleX(2)	;	
+transfom:scale(2,3,5);
+transform:skewY(20deg);
+transform:skew(50deg,30deg);
+transform:matrix(1,0.5,0,1,0,0);}
+</style>
+<body>
+<h2 style="text-align:center">2D Transformation</h2>
+<div>
+<p>Translate method moves the element from its current position</p>
+</div>
+<div id="d1">
+<p>Rotate method rotates the element to the clockwise  or anti-clockwise</p>
+</div>
+</body>
+</html>
+
+<html>
+<head>
+<title>Transform</title>
+</head>
+<style>
+div{width:200px;
+height:100px;
+width:50%;
+background-color:lavender;
+border:2px solid blue;
+transform:translate(50px,100px);
+transition:width 2s,height 2s,transform 2s;}
+div:hover{width:50%;height:120px;
+
+transform:rotate(360deg);}
+</style>
+<h2 style="text-align:center">2D Transformation</h2>
+<div>
+<p>Translate method moves the element from its current position</p>
+
+
+
+<html>
+<head>
+<title>Transform</title>
+</head>
+<style>
+button{color:blue;
+
+background-color:lavender;
+
+transition:width 2s,height 2s,transform 2s;}
+button:focus{opacity:0.3;width:10%;height:120px;
+
+transform:rotate(360deg);}
+</style>
+<h2 style="text-align:center">2D Transformation</h2>
+<div>
+<p>Translate method moves the element from its current position</p>
+<button type="button">Click me!!!</button>
+
+
+
+
+<html>
+<head>
+<title>Animation</title>
+</head>
+<style>
+img{animation:bounce 1s 4;}
+@keyframes bounce{
+0%{transform:translateY(0) rotate(90deg) scale(5) margin-left:200px;}
+50%{transform:translateY(50px) rotate(180deg) scale(2) margin-left:40px;}
+100%{transform:translateY(0) rotate(360deg) scale(5)} margin-left:40px;}
+</style>
+<body>
+<center>
+<h2>Animations</h2>
+<img src="https://i.etsystatic.com/45406761/r/il/d8f6fe/5686233003/il_1080xN.5686233003_5v4o.jpg" width="100px" height="200px">	
+</center>
+-->
+
+<html>
+<head>
+<title>Animation</title>
+</head>
+<style>
+img{animation:bounce; 
+animation-duration:1s; 
+animation-iteration-count:3;
+animation-timing-function:ease-out;
+animation-delay:1s;
+animation-direction:reverse;
+animation-fill-mode:forwards;}
+@keyframes bounce{
+0%{transform:translateY(0) rotate(90deg) scale(5) margin-left:200px;}
+50%{transform:translateY(50px) rotate(180deg) scale(2) margin-left:40px;}
+100%{transform:translateY(0) rotate(360deg) scale(5)} margin-left:40px;}
+</style>
+<body>
+<center>
+<h2>Animations</h2>
+<img src="https://i.etsystatic.com/45406761/r/il/d8f6fe/5686233003/il_1080xN.5686233003_5v4o.jpg" width="100px" height="200px">	
+</center>
