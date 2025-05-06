@@ -1,0 +1,85 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+:root{--red:#ff0000;
+--LightSalmon:#ffa07a}
+body{--red:#b22222;
+background-color:var(--red)
+;}
+h3{border:2px solid var(--LightSalmon);}
+button{--button-Orange-red:#ff4500;
+background-color:var(--button-Orange-red);}
+p{--para-border-color:green;
+background-color:var(--para-border-color)}
+@media screen and (max-width:600px)
+{body{background-color:#faebd7;}}
+</style>
+</head>
+<body>
+<div>
+<h3>Simple Variable Example</h3>		
+<p>Do you want to agree?</p>
+
+<button>Yes</button>
+<button>No</button>
+
+</div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+:root{--red:#ff0000;
+--LightSalmon:#ffa07a}
+body{--red:#b22222;
+background-color:var(--red)
+;}
+h3{border:2px solid var(--LightSalmon);}
+button{--button-Orange-red:#ff4500;
+background-color:var(--button-Orange-red);}
+#container{background-color:#9f4576; animation:animate 6s infinite;}
+@keyframes animate{from{background-color:#9f4576;}to{background-color:#ffa07a;}}
+</style>
+</head>
+<body>
+<div id="container">
+<h3>Simple Variable Example</h3>		
+<p>Do you want to agree?</p>
+
+<button>Yes</button>
+<button>No</button>
+
+</div>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+.grid-container{display:grid;grid-template-columns:repeat(4,1fr);background-color:Seashell;padding:10px;animation:gridframe 10s infinite;}
+@keyframes gridframe{
+0%{grid-template-columns:repeat(4,1fr);}
+50%{grid-template-columns:100px;1fr;1fr;1fr;}
+100%{grid-template-columns:repeat(4,1fr);}}
+</style>
+</head>
+<body>
+<div class="grid-container" >
+<h3>Animated Grid</h3><br>		
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+
+</div>
+</body>
+</html>
+
