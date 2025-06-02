@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<title>Bootstrap</title>
+<style>
+	#car{width:100%;
+	max-width:600px;
+	height:400px;
+	margin:0 auto;}
+	#car .item img{width:100%;
+	height:100%;
+	object-fit:cover;}
+</style>
+<body>
+<h1 style="text-align:center">The images with sliding</h1><br><br>
+
+<div class="container">
+	<div class="carousel slide" id="car" data-ride="carousel">
+	<ol class="carousel-indicators">
+		<li data-target="#car" data-slide-to="0" ></li>
+		<li data-target="#car" data-slide-to="1" class="active"></li>
+		<li data-target="#car" data-slide-to="2"></li>
+	</ol><br><br>
+	<div class="carousel-inner">
+		<div class="item active">
+			<img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-69266,resizemode-75,msid-106774994/industry/auto/cars-uvs/super-sports-car-segment-in-india-to-register-30-pc-growth-this-year-mclaren-automotive.jpg"	width="100%" alt="f1">
+			<div class="carousel-caption">
+				<h2>Car1</h2>
+			</div>
+		</div>
+		<div class="item">
+			<img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-69266,resizemode-75,msid-106774994/industry/auto/cars-uvs/super-sports-car-segment-in-india-to-register-30-pc-growth-this-year-mclaren-automotive.jpg" width="100%" alt="f2">
+			<div class="carousel-caption">
+				<h2>Car2</h2>
+			</div>
+		</div>
+		<div class="item">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/2019_Toyota_Corolla_Icon_Tech_VVT-i_Hybrid_1.8.jpg/1920px-2019_Toyota_Corolla_Icon_Tech_VVT-i_Hybrid_1.8.jpg"  width="100%" alt="f3">
+			<div class="carousel-caption">
+				<h2>Car3</h2>
+			</div>
+		</div>
+		<a class="left carousel-control" href="#car" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+			<span class="sr-only">Next</span>
+		</a>
+		<a class="right carousel-control" href="#car" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+</div><br><br><br><br><br>
+<h1 style="text-align:center">Collapse</h1><br><br>
+<div class="container">
+	<p style="text-align:center;font-size:30px;">This is used for content hiding and then appearing</p>
+	<button type="button" class="btn btn-warning" data-toggle="collapse" data-target="#col">Click</button>
+	<div class="collapse bg-warning" id="col">It is used to switch between the visibility of the content and vice versa.This is most commonly used in read more or less sessions
+		<img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-69266,resizemode-75,msid-106774994/industry/auto/cars-uvs/super-sports-car-segment-in-india-to-register-30-pc-growth-this-year-mclaren-automotive.jpg"  alt="f3">
+	</div><br><br>
+	<div class="collapse bg-primary" id="col">It is used to switch between the visibility of the content and vice versa.This is most commonly used in read more or less sessions
+	</div><br><br>
+</div>
+<h1 style="text-align:center">Collapsable panel</h1><br><br>
+<div class="container">
+	<p style="text-align:center;font-size:30px;">Collapsable panel to open and close it</p>
+	<div class="panel-group">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+				<a data-toggle="collapse" href="#collapse1">Panel</a></h3>
+			</div>
+			<div id="collapse1" class="panel-collapse collapse">
+				<div class="panel-body">Panel Body</div>
+				<div class="panel-footer">Panel Footer</div>
+			</div>
+		</div>
+	</div>
+</div><br><br>
+<div class="container">
+	<div class="media">
+		<div class="media-left">
+		<img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-69266,resizemode-75,msid-106774994/industry/auto/cars-uvs/super-sports-car-segment-in-india-to-register-30-pc-growth-this-year-mclaren-automotive.jpg"  class="media-object" style="width:100px">
+		</div>
+		<div class="media-body">
+			<h3 class="media-heading">Media Left Example</h3>
+			<p>Here the image is left</p>
+		</div>
+	</div>
+	<div class="media">
+	<div class="media-body">
+		<h3 class="media-heading">Media Right Example</h3>
+		<p>Here the image is Right</p>
+	</div>
+	<div class="media-right">
+		<img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-69266,resizemode-75,msid-106774994/industry/auto/cars-uvs/super-sports-car-segment-in-india-to-register-30-pc-growth-this-year-mclaren-automotive.jpg"  class="media-object" style="width:100px">
+	</div>
+	</div>
+	<div class="media">
+	
+	<div class="media-body">
+		<h3 class="media-heading">Media Top</h3>
+		<img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-69266,resizemode-75,msid-106774994/industry/auto/cars-uvs/super-sports-car-segment-in-india-to-register-30-pc-growth-this-year-mclaren-automotive.jpg"  class="media-object" style="width:100px">
+		
+		<p>Here the image is top</p>
+		<p>Here the image is top left</p>
+		
+	</div>
+	</div>
+	
+	<div class="media bg-primary">
+	<div class="media-left media-bottom">
+		<img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-69266,resizemode-75,msid-106774994/industry/auto/cars-uvs/super-sports-car-segment-in-india-to-register-30-pc-growth-this-year-mclaren-automotive.jpg"  class="media-object" style="width:100px">
+	</div>
+	<div class="media-body">
+		<h3 class="media-heading">Media Bottom</h3>
+		<p>Here the image is bottom</p>
+		<p>Here the image is bottom left</p>
+	</div>
+	</div>
+	<div class="media bg-primary">
+	<div class="media-left media-middle">
+		<img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-69266,resizemode-75,msid-106774994/industry/auto/cars-uvs/super-sports-car-segment-in-india-to-register-30-pc-growth-this-year-mclaren-automotive.jpg"  class="media-object" style="width:100px">
+	</div>
+	<div class="media-body">
+		<h3 class="media-heading">Media Middle</h3>
+		<p>Here the image is middle</p>
+		<p>Here the image is middle</p>
+	</div>
+	
+	<div class="media-body">
+	<h3 class="media-heading">Media middle</h3>
+	<p>This image is vertically aligned to the middle of the content block. <br>Add more text to see the vertical centering clearly.</p> 
+	<p>This image is vertically aligned to the middle of the content block. <br>Add more text to see the vertical centering clearly.</p>
+	</div>
+	</div>
+	<div class="container">
+<h1 style="text-align:center">Icons</h1><br><br>
+	
+	<i class="bi bi-heart-fill text-danger"></i>
+	
+	<i class="bi bi-heart text-danger"></i>
+	<i class="bi bi-search"></i>
+	<i class="bi bi-trash"></i>
+</div>	

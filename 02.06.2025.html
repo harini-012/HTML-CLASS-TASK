@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <title>Form</title>
+	  <h1 style="Text-align:Center">Form</h1><br><br>
+	  
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<form class="form-inline" action="/" method="POST">
+		<div class="form-group">
+			<div class="mb-3 p-3">
+				<label for="name" class="form-label">Name</label>
+				<input type="text" name="name" id="name" class="form-control" required>
+			</div><br>
+			<div class="mb-3">
+				<label for="email" class="form-label">Email</label>
+				<input type="email" name="email" id="email" class="form-control" required>
+			</div><br>
+			<div class="mb-3">
+				<label for="gender" class="form-label">Gender:</label><br>
+				<div class="form-check">
+				    <input type="radio" name="gender" value="male" class="form-check-input">
+					<label class="form-check-label">Male</label>
+				</div><br>
+				<div class="form-check">
+				    <input type="radio" name="gender" value="female" class="form-check-input">
+				    
+					<label class="form-check-label">Female</label>
+				</div><br>
+				<div class="mb-3">
+				<label for="gender" class="form-label">Year:</label>
+				<div class="form-check">
+				    <input type="checkbox" name="year" value="Ist" class="form-check-input">
+					<label class="form-check-label">Ist</label>
+				</div><br>
+				<div class="form-check">
+				    <input type="checkbox" name="year" value="IInd" class="form-check-input">
+				    
+					<label class="form-check-label">IInd</label>
+				</div><br>
+				<div class="mb-3">
+					<label class="form-label">Available Skills</label>
+					<select class="form-select" name="skills">
+						<option value="">--select--</option>
+						<option value="python">Python</option>
+						<option value="java">Java</option>
+						<option value="front-end">Front End</option>
+					</select>
+				</div><br>
+				<div class="mb-3">
+					<label class="form-label">Comments</label>
+					<textarea class="form-control" name="comments" rows="3"></textarea>
+				</div><br>
+						
+			
+			<button type="submit" class="btn btn-success">Submit</button>
+			
+</body>
