@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript</title>
+	</head>
+	<h1 style="text-align:Center">Operators</h1>
+	<body>
+	    <h1>And Operator with button</h1>
+		<button type="button" onclick="checkAccess()">Check Access</button>
+		<p id="p1"></p>
+	<script>
+	function checkAccess()
+	{
+		let age=15;
+		let allowed=true;
+		if (age>=18 && allowed)
+		{
+			document.getElementById("p1").innerText = "Access Granted";
+		}
+		else
+		{
+			document.getElementById("p1").innerText = "Access Denied";
+		}
+	}
+	
+</script>
+<h1>Without button</h1>
+<p id="p2"></p>
+	<script>
+		let a=18;
+		let allowed2=true;
+		if (a>=18 && allowed2)
+		{
+			document.getElementById("p2").innerText = "Access Granted";
+		}
+		else
+		{
+			document.getElementById("p2").innerText = "Access Denied";
+		}
+</script>
+<h1>Checking the type</h1>
+<p id="p3"></p>
+	<script>
+		let b=28;
+		let allowed3=true;
+		document.write(typeof b);
+</script>
+<h1>Undefined data type</h1>
+<p id="p4"></p>
+	<script>
+		let c;
+		
+		document.write(typeof c);
+</script>
+<h1>Switch</h1>
+<p id="p5"></p>
+		<button type="button" onclick="checkDay()">Check Day</button>
+
+	<script>
+	function checkDay()
+	{
+		let day;
+		let date= new Date().getDay();
+		switch(date)
+		{
+			case 0:
+			day="Sunday";
+			break;
+			case 1:
+			day="Monday";
+			break;
+			case 2:
+			day="Tuesday";
+			break;
+			case 3:
+			day="Wednesday";
+			break;
+			case 4:
+			day="Thursday";
+			break;
+			case 5:
+			day="Friday";
+			break;
+			case 6:
+			day="Saturday";
+			break;
+		}
+		document.getElementById("p5").innerHTML="Todays is"+day
+			
+	}
+		
+</script>
+<h1>Switch Default</h1>
+<p id="p6"></p>
+		<button type="button" onclick="checkDayNumber()">Check by number</button>
+
+	<script>
+	function checkDayNumber()
+	{
+		let day;
+		let dayNumber=4;
+		switch(dayNumber)
+		{
+			case 0:
+			day="Sunday";
+			break;
+			case 1:
+			day="Monday";
+			break;
+			case 2:
+			day="Tuesday";
+			break;
+			case 3:
+			day="Wednesday";
+			break;
+			case 4:
+			day="Thursday";
+			break;
+			case 5:
+			day="Friday";
+			break;
+			case 6:
+			day="Saturday";
+			break;
+		}
+		document.getElementById("p6").innerHTML="Todays is"+day
+			
+	}
+		
+</script>
+<h1>User inuput</h1>
+<p id="p7"></p>
+		<button type="button" onclick="calculate()">Caluculate</button>
+
+	<script>
+	function calculate()
+	{ let n1=parseInt(prompt("Enter a number"));
+	  let n2=parseInt(prompt("Enter a number"));
+	  let operation=prompt("Enter the operation '+'Add '-'Substract '*'Multiply");
+	  let result;
+	  switch(operation)
+	  {
+	  case '+':
+		result=n1+n2;
+		break;
+	  case '-':
+		result=n1-n2;
+		break;
+	  case '*':
+	    result=n1*n2;
+		break;
+	 default:
+		alert("Enter a valid input")
+		}
+		document.getElementById("p7").innerHTML="Answer is:" +result;
+		
+	}
+			 
+	
+		
+</script>
+<h1>User inuput without prompt</h1>
+<label for="n3">Enter the number</label>
+<input type="number" id="n3" placeholder="Enter the first number">
+<br><br>
+<label for="n4">Enter the number</label>
+<input type="number" id="n4" placeholder="Enter the Second number">
+<br><br>
+<label for="o">Enter the operation</label>
+<input type="text" id="o" placeholder="+-*">
+<br><br>
+<p id="p8"></p>
+		
+		<button type="button" onclick="calculate1()">Caluculate</button>
+
+	<script>
+	function calculate1()
+	{ let n3=parseInt(document.getElementById("n3").value)
+	 let n4=parseInt(document.getElementById("n4").value)
+	 let operation1=document.getElementById("o").value;
+	
+	  let result;
+	  switch(operation1)
+	  {
+	  case '+':
+		result=n3+n4;
+		break;
+	  case '-':
+		result=n3-n4;
+		break;
+	  case '*':
+	    result=n3*n4;
+		break;
+	 default:
+		alert("Enter a valid input")
+		result="Invalid operation"
+		}
+		document.getElementById("p8").innerHTML="Answer is:" +result;
+		
+	}
+			 
+	
+		
+</script>
+
+<h1>for Loop</h1>
+<p id="p9"></p>
+		<button type="button" onclick="calculate2()">Caluculate</button>
+<script>
+function calculate2()
+{let n5;
+let result3=1;
+for (n5=1;n5<=10;n5++)
+{
+result3*=n5;
+}
+document.getElementById("p9").innerHTML="	Answer is:" +result3;
+}
+</script>
+
+<h1>for-in Loop</h1>
+<p id="p10"></p>
+		<button type="button" onclick="calculate3()">Display</button>
+<script>
+function calculate3()
+{let student={'name':"Harini",'age':18};
+
+for (let key in student)
+{
+
+document.write(key +":"+student[key]+"<br>")
+}
+}
+</script>
+<h1>for-of Loop with list</h1>
+<p id="p10"></p>
+		<button type="button" onclick="calculate4()">Display</button>
+<script>
+function calculate4()
+{let student1=["Harini","Poorani"];
+
+for (let element of student1)
+{
+
+document.write(element+"<br>")
+}
+}
+</script>
+<h1>for-of Loop with nested dictionary</h1>
+<p id="p10"></p>
+		<button type="button" onclick="calculate5()">Display</button>
+<script>
+function calculate5()
+{let student1=["Harini","Poorani"];
+
+for (let element of student1)
+{
+
+document.write(element+"<br>")
+}
+let st=[{'name':"Harini",'age':18},{'name':"Poorani",'age':10}];
+for (let student2 of st)
+{
+document.write(student2.name +"'s age is" + student2.age+ "years old<br>")
+}
+}
+</script>
+				
