@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+		<title> Javascript Loop</title>
+	</head>
+	<body style="background-color:beige">
+		<h1 style="text-align:center">Java Script loops</h1><br>
+		<h2>While Loop</h2>
+		<p id="p1"></p>
+		<script>
+			let i=1;
+			let result="";
+			while(i<10)
+			{
+				result+=i+" "
+				i++;
+			}
+			document.getElementById("p1").innerHTML=result;
+		</script>
+		<h2>Do While Loop</h2>
+		<p id="p2"></p>
+		<script>
+			let i1=1;
+			let result1="";
+			do
+			{
+				result1+=i1+" "
+				i1++;
+			}while(i1<10);
+			document.getElementById("p2").innerHTML=result;
+		</script>
+		<h2>Function Expression</h2>
+		<p id="p3"></p>
+		<script>
+			const getDetails=function(s)
+			
+			{
+					return "Name:" +s.name +"<br> Degree:" + s.Degree +"<br>CGPA:"+s.cgpa;
+			}
+			const student={"name":"Harini", "Degree":"Bsc","cgpa":8.5};
+			document.write(getDetails(student));
+		</script>
+		<h2>Arrow Function</h2>
+		<p id="p4"></p>
+		<script>
+			const getDetails1= (s1)=>
+			
+			{
+					return "Name:" +s1.name +"<br> Degree:" + s1.Degree +"<br>CGPA:"+s1.cgpa;
+			};
+			const student1={"name":"Harini", "Degree":"Bsc","cgpa":8.5};
+			document.write(getDetails1(student1));
+		</script>
+		<h2>Array</h2>
+		<p id="p5"></p>
+		<script>
+			const scooters=["wespa","pep++","activa"]
+			
+			document.getElementById("p5").innerHTML=scooters
+		</script>
+		<h2>Array to string</h2>
+		<p id="p6"></p>
+		<script>
+			const scooters1=["wespa","pep++","activa"];
+			let scooters1_string=scooters1.toString();
+			document.getElementById("p6").innerHTML=scooters1_string
+		</script>
+		<h2>Sorting Array</h2>
+		<p id="p7"></p>
+		<script>
+			const scooters2=["wespa","pep++","activa"];
+			let scooters2_string=scooters2.sort();
+			document.getElementById("p7").innerHTML=scooters2_string
+		</script>
+		<h2>Array and properties</h2>
+		<p id="p8"></p>
+		<script>
+			const scooters3=["wespa","pep++","activa"];
+			scooters3.push("access");
+			scooters3[3]="wego";
+			scooters3.pop()
+			delete scooters3[1]
+			let scooters3_length=scooters3.length;
+			let result4="<ul>";
+			for (let i2=0;i2<scooters3_length;i2++)
+			{
+			result4+="<li>"+scooters3[i2]+"</li>";
+			}
+			result4+="</ul>"
+			document.getElementById("p8").innerHTML=result4
+		</script>
+		<h2>Multi dimension array to single dimension array</h2>
+		<p id="p9"></p>
+		<p id="p10"></p>
+		<script>
+		    
+			const scooters4=[[1,2,3],[4,5,6]];
+			const newArray=scooters4.flat();
+			document.getElementById("p9").innerHTML=scooters4.length;
+			document.getElementById("p10").innerHTML=newArray.length
+		</script>
+		<h2>Splice</h2>
+		<p id="p11"></p>
+		<p id="p12"></p>
+		<script>
+		    
+			const scooters5=["Vespa","pep++","access"]
+			const removed=scooters5.splice(1,1,"activa","streak")
+			document.getElementById("p11").innerHTML=scooters5;
+			document.getElementById("p12").innerHTML=removed
+		</script>
+		<h2>Slice</h2>
+		<p id="p13"></p>
+		<p id="p14"></p>
+		<script>
+		    
+			const scooters6=["Vespa","pep++","access","activa"]
+			const slice=scooters6.slice(1,3)
+			document.getElementById("p13").innerHTML=scooters6;
+			document.getElementById("p14").innerHTML=slice
+		</script>
+		<h2>Shift and unshift</h2>
+		<p id="p15"></p>
+		<p id="p16"></p>
+		<script>
+		    
+			const scooters7=["Vespa","pep++","access","activa"]
+			scooters7.shift()
+			scooters7.unshift("Streak")
+			document.getElementById("p15").innerHTML=scooters7[0];
+			document.getElementById("p16").innerHTML=scooters7;
+			
+		</script>
+</body>
+</html>
+		
