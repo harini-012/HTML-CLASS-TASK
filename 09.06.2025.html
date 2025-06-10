@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+<head>
+<body>
+	<h2>Finding the html elements</h2>
+	<p id="p1">Finding the html elements by id</p>
+	<p id="p2"></p>
+	<script>
+		const value=document.getElementById("p1");
+		document.getElementById("p2").innerHTML="The value in p1 is:"+value.innerHTML;
+	</script>	
+	<h2>Finding the html elements by tag</h2>
+	<p id="p3">Finding the html elements by tag</p>
+	<p id="p4"></p>
+	<script>
+		const value1=document.getElementsByTagName("p");
+		document.getElementById("p4").innerHTML="The value in p3 is:"+value1[0].innerHTML;
+	</script>	
+	<h2>Finding the html elements by tag</h2>
+	<p id="p5">Finding the html elements by tag using 2 tags</p>
+	<div>HTML division</div>
+	<p id="p6"></p>
+	<p id="p7"></p>
+	<script>
+		const value2=document.getElementsByTagName("p");
+		const divValue=document.getElementsByTagName("div")
+		document.getElementById("p5").innerHTML="The value in p3 is:"+value2[0].innerHTML;
+		document.getElementById("p6").innerHTML="The value in p3 is:"+divValue[0].innerHTML;
+		
+	</script>
+	<h2>Finding the html elements by tag two query selector</h2>
+	<p id="p8">Finding the html elements by tag using 2 tags</p>
+	<div>HTML division</div>
+	<strong>HTML strong</strong>
+	<p id="p9"></p>
+	<p id="p10"></p>
+	<script>
+	const value3=document.querySelectorAll("p,div,strong")
+	value3.forEach(v1=>{
+	console.log(v1.textContent);})
+	</script>
+	<h2>Finding the html elements by tag without for each</h2>
+	<p id="p11">Finding the html elements by tag using 2 tags</p>
+	<div>HTML division</div>
+	<strong>HTML strong</strong>
+	<p id="p12"></p>
+	<p id="p13"></p>
+	<script>
+		const value4=document.getElementsByTagName("p")[0]
+		const divValue1=document.getElementsByTagName("div")[0]
+		const pTxt=value4.textContent;
+		const divTxt=divValue1.textContent;
+		console.log("Paragraph content="+pTxt+"\nDiv content="+divTxt)
+	</script>
+	<h2>Finding the html elements by class</h2>
+	<p  id="p14">Finding the html elements</p>
+	<div class="divClass">HTML division</div>
+	<strong class="strongClass">HTML strong</strong>
+	<p id="p15"></p>
+	<p id="p16"></p>
+	<script>
+		const value5=document.getElementsByClassName("strongClass")[0]
+		const divValue2=document.getElementsByClassName("divClass")[0]
+		const pTxt1=value5.textContent;
+		const divTxt1=divValue2.textContent;
+		console.log("Strong content="+pTxt1+"\nDiv content="+divTxt1)
+	</script>
+	<h2>Finding the html elements by class with for each</h2>
+	<p  id="p17">Finding the html elements</p>
+	<div class="divClass">HTML division</div>
+	<strong class="strongClass">HTML strong</strong>
+	<p id="p18"></p>
+	<p id="p19"></p>
+	<script>
+		const value6=document.querySelectorAll('.divClass,.strongClass');
+		value6.forEach(v2=>{console.log(v2.textContent)})
+	</script>
+	<h2>Changing the style of the html element </h2>
+	<p id="p20">HTML styles andchanging it using java script</p>
+	<script>
+		document.getElementById("p20").style.color="blue"
+	</script>
+	<h2>Changing the style of the html element  using button </h2>
+	<p id="p21">HTML styles andchanging it using java script</p>
+	<button type="button" onclick="document.getElementById('p21').style.color='blue';">Click to change</button>
+	<h2>Changing the style of the html element  using alignment align content and align-items </h2>
+	<style>
+		#divId{
+		width:150px;
+		height:150px;
+		border:1px solid red;
+		align-items:center;
+		display:flex;
+		flex-flow:row wrap;
+
+		}
+	</style>
+	<div id="divId">
+		<div style="background-color:coral">Division1</div>
+		<div style="background-color:yellow">Division2</div>
+		<div style="background-color:lightpink">Division3</div>
+		<div style="background-color:lightgreen">Division4</div>
+	</div>
+	<button type="button" onclick="align()">Click to see the changes</button>
+	<script>
+		function align()
+		{
+			document.getElementById("divId").style.alignItems="stretch";
+		}
+	</script>
+	<h2>Changing the style of the html element  using animation </h2>
+	<style>
+		#divId1{
+		width:150px;
+		height:150px;
+		border:1px solid red;
+		position:relative;
+		animation:divAnimate 2s infinite;
+		}
+		@keyframes divAnimate1{
+			from{left:0px;}
+			to{left:200px;}
+			}
+		@keyframes divNewAnimate1{
+	from{bottom:0px;}
+	to{bottom:60px;}
+	}
+	
+		
+	</style>
+	<div id="divId1" style="background-color:coral">Division1</div>
+	<button type="button" onclick="ani()">Click to see the changes</button>
+	<script>
+		function ani()
+		{
+			document.getElementById("divId1").style.animation="divNewAnimate1 3s 2";	
+		}
+	</script>
+	<h2>Changing the style of the html element  using animation </h2>
+	<style>
+		#divId2{
+		width:100px;
+		height:100px;
+		border:1px solid red;
+		position:relative;
+		animation:divAnimate 2s infinite;
+		}
+		@keyframes divAnimate{
+			from{left:0px;}
+			to{left:200px;}
+			}
+		@keyframes divNewAnimate{
+	from{right:0px;}
+	to{right:100px;}
+	}
+	
+		
+	</style>
+	<img id="divId2" src="https://images.unsplash.com/photo-1458929526027-052f5d6a3c5e?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zmxvd2V8ZW58MHx8MHx8fDA%3D"><br>
+	<button type="button" onclick="ani2()">Click to see the changes</button>
+	<script>
+		function ani2()
+		{
+			document.getElementById("divId2").style.animation="divNewAnimate 3s 2";
+		}
+	</script>
+	<h2>Changing the background of the document </h2>
+	<body style="background-color:beige">
+	<button type="button" onclick="back()">Change background</button>
+	<script>
+		function back()
+		{
+			document.body.style.background="lightpink url('nature.jpg') no-repeat center /cover"
+		}
+	</script>
+	
+	
+	
+</body>
+</html>
+	
