@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+	<h1 style="text-align:center">Javascript Events</h1>
+</head>
+<body>
+<h2>Onclick with heading</h2>
+<p onclick="textChange(this)">Click to see the change</p>
+<script>	
+	function textChange(id)
+	{
+		id.innerHTML="Changed....";
+	}
+</script>
+<h2>Button event</h2>
+<button type="button" onclick="displayDate()">Check the date</button>
+<script>
+	function displayDate()
+	{
+		document.getElementById("p1").innerHTML=Date();
+	}
+</script>
+	<p id="p1"></p>
+<h2>Using id</h2>
+<button type="button" id="b1">Check the date</button>
+<script>
+	document.getElementById("b1").onclick=displaytoday;
+	function displaytoday()
+	{
+		document.getElementById("p2").innerHTML=Date();
+	}
+</script>
+	<p id="p2"></p>
+<h2>Mouse over and mouse click events</h2>
+<style>
+	#divId
+	{
+	background-color:aqua;
+	width:150px;
+	height:100px;
+	padding:30px;
+	border:1px solid green;
+	}
+</style>
+<div id="divId" onmouseover="m_over(this)" onmouseout="m_out(this)">
+</div>
+<script>
+	function m_over(mo)
+	{
+		mo.innerHTML="This is mouse over function"
+		
+		
+	}
+	function m_out(mo)
+	{
+		mo.innerHTML="This is mouse out function"
+	
+	}
+</script>
+<h2>On focus event</h2>
+<input type="text" onfocus="handle(this)" placeholder="Focus to see the change">
+<script>
+	function handle(f)
+	{
+		f.style.background="pink"
+	}
+</script>
+<h2>Event listeners</h2>
+<button id="b2">Click me</button>
+<script>
+	document.getElementById("b2").addEventListener("click",buttonFun);
+	function buttonFun()
+	{
+		alert("Event listener is working")
+	}
+</script>
+<h2>Mulitiple Event listeners</h2>
+<button id="b3">Click me</button>
+<script>
+	var event=document.getElementById("b3")
+	event.addEventListener("click",buttonFun2);
+	event.addEventListener("click",buttonFun3);
+	
+	function buttonFun2()
+	{
+		alert("Event listener is working")
+	}
+	function buttonFun3()
+	{
+		alert("Event listener2 is working")
+	}
+</script>
+<h2>Event Listener</h2>
+<style>
+#divId2{
+	background-color:navy;
+	border:1px solid black;
+	width:100px;
+	height:100px;
+	}
+</style>
+<div id="divId2">
+</div>
+<script>
+		    var divVar = document.getElementById("divId2");
+			divVar.addEventListener('mouseover',fun1);
+			divVar.addEventListener('mouseout',fun2);
+			divVar.addEventListener('click',fun3);
+			function fun1()
+			{
+			    divVar.style.background = "yellow"
+			}
+			function fun2()
+			{
+			    divVar.style.background = "red"
+			}
+			function fun3()
+			{
+			    divVar.style.background = "green"
+			}
+</script>
+<h2>Event bubbling and event capturing</h2>
+<style>
+#divId3{
+	background-color:navy;
+	border:1px solid black;
+	width:200px;
+	height:200px;
+	}
+#divId4{
+background-color:blue;
+border:1px solid orange;
+width:200px;
+height:200px;
+	}
+#p3,#p4{
+background-color:beige;
+font-size:25px;
+border:2px solid;
+padding:15px;}
+</style>
+<div id="divId3">
+<h2>Bubbling</h2>
+<p id="p3">Event Bubling</p>
+</div><br><br>
+<div id="divId4">
+<h2>Capturing</h2>
+<p id="p4">Event capturing</p>
+</div>
+<script>
+ document.getElementById("p3").addEventListener("click",function(){alert("Paragraph1");},false);
+ document.getElementById("divId3").addEventListener("click",function(){alert("Division1");},false);
+ document.getElementById("p4").addEventListener("click",function(){alert("Paragraph2");},true);
+ document.getElementById("divId4").addEventListener("click",function(){alert("Division");},true);
+ 
+</script>
+<h2>Remove Event listener</h2>
+<style>
+#divId5{
+background-color:blue;
+border:1px solid orange;
+width:200px;
+height:200px;}
+</style>
+<div id="divId5">
+<button onclick="removeEvent()" id="b4">Remove Event</button>
+</div>
+<p id="p5"></p>
+<script>	
+var eve=document.getElementById("divId5")
+eve.addEventListener("mousemove",mouseFun);
+function mouseFun()
+{
+document.getElementById("p5").innerHTML=Math.random()}
+function removeEvent()
+{
+	eve.removeEventListener("mousemove",mouseFun)
+}
+</script>
+<h2>Key board event</h2>
+<style>
+#divId6{
+background-color:blue;
+border:1px solid orange;
+width:200px;
+height:200px;}
+</style>
+<div id="divId6">Press A</div>
+<script>
+	const divElement=document.getElementById("divId6");
+	document.addEventListener('keydown',(event)=>{const key=event.key.toLowerCase();if (key=='a'){divElement.style.background='coral';divElement.textContent='Color changes'}else if(key=='g'){divElement.style.background="green";divElement.textContent='Green'}})
+	document.addEventListener('keyup',(event)=>{divElement.textContent=`Key is released $(event key)`;});
+</script>
+
+</body>
+</html>
