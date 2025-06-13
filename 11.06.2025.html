@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Java script </title>
+		<script>
+			function validateForm()
+			{
+				let val=document.forms["f1"]["fname"].value
+				if (val==="")
+				{
+					alert("Name cannot be empty")
+					return false;
+				}	
+			}
+		</script>
+	</head>
+	<body>
+		<h2>Form submisions using javascript</h2>
+		<h3>Form Validation</h3>
+		<form name="f1" action="/submit" onsubmit="return validateForm()" method="POST">
+			Name: <input type="text" name="fname"><br><br><br>
+				  <input type="submit" value="Submit">
+		</form>
+	</body>
+</html>
+
+

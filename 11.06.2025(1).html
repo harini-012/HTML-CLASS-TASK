@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascript</title>
+</head>
+<body>
+	<h2>Key up and key down</h2>
+	<input type="text" id="textField" placeholder="Enter a key">
+	<script>
+		const input=document.getElementById("textField")
+		input.addEventListener('keydown',function(event)
+		{
+		console.log('key down:',event.key);}
+		)
+		input.addEventListener('keyup',function(event)
+		{
+		console.log('key up:',event.key);}
+		);
+	</script>
+	<h2>Ctrl +s</h2>
+	<h3>Press ctrl+s</h3>
+	<script>
+		document.addEventListener('keydown',function(event){
+		if(event.ctrlKey&&event.key==='s')
+		{
+			event.preventDefault()
+			alert("Saved")
+		}
+		
+		});
+	</script>
+	<h2>Arrow keys</h2>
+	<style>
+	#div1
+	{
+	width:100px;
+	height:100px;
+	background-color:lightgreen;
+	position:absolute;
+	top:280px;
+	left:50px;
+	}
+	</style>
+	<div id="div1"></div>
+		<script>
+			const divElement=document.getElementById("div1")
+			let topPosition=280;
+			let leftPosition=50;
+			document.addEventListener('keydown',function(event){
+			if (event.key==='ArrowUp'){topPosition-=10;}
+			else if (event.key==='ArrowDown'){topPosition+=10}
+			else if (event.key==='ArrowLeft'){leftPosition-=10;}
+			else if (event.key==='ArrowRight'){leftPosition+=10}
+			divElement.style.top=topPosition+"px";
+			divElement.style.left=leftPosition+"px";})
+		</script>
+	
+	<style>
+	#div2
+	{
+	width:150px;
+	height:100px;
+	background-color:lightgreen;
+	position:absolute;
+	top:500px;
+	left:50px;
+	padding:20px;
+	}
+	#h2{
+	position:absolute;
+	top:450px;}
+	</style>
+	<h2 id="h2">Using smilies and emoji for each letter</h2>
+	
+	<div id="div2">
+	
+	</div>
+	<script>
+			const divElement1=document.getElementById("div2")
+			document.addEventListener('keydown',function(event){
+			let reaction=' ';
+			switch(event.key)
+			{case 's':
+			reaction="😊"
+			break;
+			case 'c':
+			reaction="🥲"
+			break;
+			default:
+			reaction="❤️"
+			}
+			divElement1.textContent=reaction;
+			});
+	</script>
+	
+			
