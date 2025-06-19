@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+</head>
+<body>
+	<h2>Local Storage</h2>
+	<p>Using console</p>
+	<script>
+		localStorage.setItem("name","harini")
+		localStorage.removeItem("name")
+		let nameValue=localStorage.getItem('name')
+		console.log(nameValue)
+		
+	</script>
+	<h2>Inside input field</h2>
+	<input type="text" id="t1" placeholder="Enter your name">
+	<button id="b1" onclick="setName()">Set </button>
+	<button id="b2" onclick="getName()">Get</button>
+	<p id="p1"></p>
+	<script>
+		function setName()
+		{
+			const username=document.getElementById("t1").value
+			if(username!=="")
+			{
+				localStorage.setItem("Username",username)
+				alert("Item saved")
+			}
+		}
+		function getName()
+		{
+			const name=localStorage.getItem("Username")
+			document.getElementById("p1").innerHTML="The user name is " + name
+		}
+			
+	</script>		
+	<h2>Converting into strings</h2>
+	<p>Local storage only handle with strings</p>
+	<script>
+		let userDetails={"name":"Harini","role":"Student"};
+		localStorage.setItem("UserName",JSON.stringify(userDetails));
+		let value=JSON.parse(localStorage.getItem("UserName"))
+		console.log(value.name)
+		console.log(value.role)
+	</script>
+	<h2>JavaScript Session storage</h2>
+	<p>It only allow us to save for particular session</p>
+	<div>
+		<input type="text" id="t2" placeholder="Enter your name">
+		<button id="b3" onclick="setName()">Set </button>
+		<button id="b4" onclick="getName()">Get</button>
+		<p id="p2"></p>
+	</div>
+	<div>
+		<input type="text" id="t3" placeholder="Enter your name">
+		<button id="b5" onclick="setsessionName()">Set </button>
+		<button id="b6" onclick="getsessionName()">Get</button>
+		<p id="p3"></p>
+	</div>
+	
+	<script>
+		function setName()
+		{
+			const username1=document.getElementById("t2").value
+			if(username1!=="")
+			{
+				localStorage.setItem("Username1",username1)
+				alert("Item saved")
+			}
+		}
+		function getName()
+		{
+			const name1=localStorage.getItem("Username1")
+			document.getElementById("p2").innerHTML="The user name is " + name1
+		}
+		function setsessionName()
+		{
+			const username2=document.getElementById("t3").value
+			if(username2!=="")
+			{
+				sessionStorage.setItem("Username2",username2)
+				alert("Item saved")
+			}
+		}
+		function getsessionName()
+		{
+			const name2=sessionStorage.getItem("Username2")
+			document.getElementById("p3").innerHTML="The user name is " + name2
+		}
+		
+			
+	</script>	
+		
+		
+		
+</body>
+</html>
