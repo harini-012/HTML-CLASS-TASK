@@ -1,0 +1,104 @@
+<!--<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>Angular JS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+</head>
+<body>
+	<h2>List example using Angular JS</h2>
+	<div ng-init="BeautyProducts=['Lakme foundation','MAybeline kajal','Vico turmeric']">
+		<ul>
+			<li ng-repeat="bp in BeautyProducts">{{$index+1}} -{{bp}}</li>
+		</ul>
+		<p style="background-color:lightblue">Total items in the list are: {{BeautyProducts.length}}</p>
+	</div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular JS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+</head>
+<body>
+	<h2>Module and controller</h2>
+	<div ng-app="app1" ng-controller="c1">
+		{{firstName +" "+ lastName}}
+	</div>	
+	<script>
+		var app=angular.module("app1",[]);
+		app.controller("c1",function($scope)
+		{
+			$scope.firstName="Harini";
+			$scope.lastName="Rajesh";
+			
+		})
+		
+	</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular JS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+</head>
+<body>
+	<h2>Module and controller with changing input</h2>
+	<div ng-app="app1" ng-controller="c1">
+		First Name:<input type="text" ng-model="firstName"><br>
+		Last NAmme:<input type="text" ng-model="lastName"><br>
+		
+		Full name:{{firstName +" "+ lastName}}
+	</div>	
+	<script>
+		var app=angular.module("app1",[]);
+		app.controller("c1",function($scope)
+		{
+			$scope.firstName="Harini";
+			$scope.lastName="Rajesh";
+			
+		})
+		
+	</script>
+</body>
+</html>
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular JS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+</head>
+<body>
+	<h2>Module and controller with Function expression</h2>
+	<div ng-app="app1" ng-controller="c1">
+		First Name:<input type="text" ng-model="firstName"><br>
+		Last Name:<input type="text" ng-model="lastName"><br>
+		
+		Full name:{{fullName()}}
+	</div>	
+	<script>
+		var app=angular.module("app1",[]);
+		app.controller("c1",function($scope)
+		{
+			$scope.firstName="Harini";
+			$scope.lastName="Rajesh";
+			$scope.fullName=function()
+			{
+				return $scope.firstName+" "+$scope.lastName
+			}
+		})
+		
+	</script>
+</body>
+</html>
